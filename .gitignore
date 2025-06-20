@@ -1,0 +1,47 @@
+# Node.js dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+out/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+.env
+.env.*
+
+# VS Code settings
+.vscode/
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+
+# Coverage reports
+coverage/
+
+# Parcel, Next.js, etc.
+.cache/
+.next/
+.vercel/
+.netlify/
+
+# SvelteKit
+.svelte-kit/
+
+# Gatsby
+.cache/
+public/
+
+# Misc
