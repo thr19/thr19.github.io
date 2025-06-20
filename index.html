@@ -12,7 +12,7 @@
         .then(r => r.json())
         .then(data => repos = data)
     ">
-      <h1><i class="bi bi-git"></i> My GitHub Repositories.</h1>
+      <h1><i class="bi bi-git"></i> My GitHub Repositories</h1>
 
       <div class="row row-cols-1 row-cols-md-2 g-4 mt-4" x-show="repos.length">
         <template x-for="repo in repos" :key="repo.id">
