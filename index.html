@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My GitHub Portfolio</title>
+    <script type="module" crossorigin src="/assets/index-CI_YMh7T.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-JGKiBnRu.css">
+  </head>
+  <body class="bg-light text-dark p-4">
+    <div id="app" x-data="{ repos: [] }" x-init="
+      fetch('https://api.github.com/users/thr19/repos')
+        .then(r => r.json())
+        .then(data => repos = data)
+    ">
+      <h1><i class="bi bi-git"></i> My GitHub Repositories</h1>
+
+      <div class="row row-cols-1 row-cols-md-2 g-4 mt-4" x-show="repos.length">
+        <template x-for="repo in repos" :key="repo.id">
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title" x-text="repo.name"></h5>
+                <p class="card-text" x-text="repo.description || 'No description'"></p>
+              </div>
+              <div class="card-footer">
+                <a class="btn btn-sm btn-primary" :href="repo.html_url" target="_blank">View Repo</a>
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+  </body>
+</html>
